@@ -1,5 +1,6 @@
 package com.ldh.jy.springboot.domain.posts;
 
+import com.ldh.jy.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter// getter 자동 생성
 @NoArgsConstructor// 기본 생성자 자동 추가
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
     /* 실제 DB 테이블과 매칭될 클래스 (Entity 클래스)*/
 
     @Id
