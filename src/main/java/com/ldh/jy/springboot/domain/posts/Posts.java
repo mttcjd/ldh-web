@@ -5,7 +5,11 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter// getter 자동 생성
 @NoArgsConstructor// 기본 생성자 자동 추가
@@ -33,6 +37,7 @@ public class Posts extends BaseTimeEntity {
     }
 
     public void update(String title, String content) {
+        System.out.println("here : "+title);
         this.title = title;
         this.content = content;
     }
